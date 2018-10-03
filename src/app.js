@@ -30,7 +30,7 @@ app
 		secret: jwtSecrect
 	}).unless({
 		path: [
-			/^\/server\/login/
+			/^\/login/
 		]
 	}))
 // .use(serve(path.join(__dirname, './public')))
