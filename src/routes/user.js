@@ -7,12 +7,14 @@ router
 	//	添加用户
 	.post('/add', async ctx => {
 		const {
-			value
+			username,
+			password
 		} = ctx.request.body
 
 		// 数据库添加操作
 		const user = await User.create({
-			value
+			username,
+			password
 		})
 		if (user) {
 			// 删除缓存

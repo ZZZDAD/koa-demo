@@ -1,8 +1,11 @@
 import mongoose from 'mongoose'
 
-const DB_NAME = 'dbname'
+const DB_USER = 'user'
+const DB_PASSWORD = 'pwd'
+const DB_NAME = 'db'
 const DB_PORT = 27017
-const DB_URL = `mongodb://localhost:${DB_PORT}/${DB_NAME}`
+
+const DB_URL = `mongodb://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}`
 
 const options = {
   autoIndex: false,
